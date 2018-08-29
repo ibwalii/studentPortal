@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Registration Mai-Poly</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.PNG" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Floating css libr -->
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Baedda/floating-form-labels/master/scss/_floating-form-labels.scss">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/floating.css">
+  </head>
+  <body>
+      
+      
+        <form style="max-width: 20rem;">
+                <div>
+                    <h3 class="text-muted text-center">Student Login</h3>
+                </div>
+                <hr>
+            <img src="assets/img/logo.PNG" style="height:100px;" class="img-fluid img-thumbnail rounded-circle mx-auto d-block" alt="Profile">
+                <div class="ffl-wrapper">
+                  <label for="Registration Number" class="ffl-label">Registration Number</label>
+                  <input type="text" id="regno" name="regno">
+                </div>
+                <div class="ffl-wrapper">
+                  <label for="Password" class="ffl-label">Password</label>
+                  <input type="password" id="password" name="password">
+                </div>
+                <button type="submit">Continue <i class="fa fa-sign-in-alt" aria-hidden="true"></i></button>
+              </form>
+               
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/Baedda/floating-form-labels/master/dist/floatingFormLabels.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+            // BUTTON LOADING
+            $('.btn').on('click', function() {
+                var $this = $(this);
+                var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> checking pin...';
+                if ($(this).html() !== loadingText) {
+                $this.data('original-text', $(this).html());
+                $this.html(loadingText);
+                window.location.replace("http://stackoverflow.com");
+                }
+                setTimeout(function() {
+                $this.html($this.data('original-text'));
+                }, 2000);
+            });
+
+            // FLOATING PANEL ACTIVATION
+            $('.ffl-wrapper').floatingFormLabels();
+        })
+        
+        
+       
+    </script>
+  </body>
+</html>

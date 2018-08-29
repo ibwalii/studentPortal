@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Registration Mai-Poly</title>
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo.PNG" />
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!-- <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" >
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Floating css libr -->
+
+    <link rel="stylesheet" href="https://raw.githubusercontent.com/Baedda/floating-form-labels/master/scss/_floating-form-labels.scss">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/custom.css">
+    <link rel="stylesheet" href="assets/css/floating.css">
+  </head>
+  <body>
+      <div class="homewrapper">
+        <div class="header">
+            <img src="assets/img/header.png" class="img-fluid mr-auto brand" alt="">
+            <hr>
+        </div>
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <h3>2018/2019 Admission Screening Portal</h3>
+                    <h5>ONLINE REGISTRATION GUIDELINES</h5>
+                    <p>Welcome to Mai Idris Alooma Polytechnic online Registration portal, Please take time to read the Guidelines before starting your application</p>
+                </div>
+                <div class="col-md-4" style="border-left: solid thin #000;">
+                    <h6>click <a href="studentlogin.html">here</a> to continue your registration </h6>
+                    <h5>New Registration</h5>
+                    <form id="regform" name="regform" action="">
+                            <div class="ffl-wrapper">
+                              <label for="name" class="ffl-label">Pin Number</label>
+                              <input type="text" id="pin" name="pin" autocomplete="off" required>
+                            </div>
+                            <div class="ffl-wrapper">
+                              <label for="First Name" class="ffl-label">First Name:</label>
+                              <input type="text" id="fname" name="fname" autocomplete="off" required>
+                            </div>
+                            <div class="ffl-wrapper">
+                                <label for="Last Name" class="ffl-label">Last Name:</label>
+                                <input type="text" id="lname" name="lname" autocomplete="off" required>
+                            </div>
+                            <div class="ffl-wrapper">
+                                <label for="Phone" class="ffl-label">Phone Number:</label>
+                                <input type="text" id="phone" name="phone" autocomplete="off" required>
+                            </div>
+                            <div class="ffl-wrapper">
+                              <label for="Password" class="ffl-label">Password </label>
+                              <input type="password" id="password" name="password" required>
+                            </div>
+                            <div class="ffl-wrapper">
+                                <label for="Confirm Password" class="ffl-label">Confirm Password </label>
+                                <input type="password" id="cpassword" name="cpassword" required>
+                            </div>
+                            <button type="button" class="btn btn-lg btn-success">Start Registration</button>
+                          </form>
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER -->
+        <hr>
+        <footer class="footer">
+                <div class="container">
+                  <span class="text-muted">&copy; Mai Idris Alooma Polytechnic 2018</span>
+                </div>
+        </footer>
+      </div>     
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/js/bootstrap.min.js" integrity="sha384-o+RDsa0aLu++PJvFqy8fFScvbHFLtbvScb8AjopnFD+iEQ7wo/CG0xlczd+2O/em" crossorigin="anonymous"></script>
+    <script src="https://rawgit.com/Baedda/floating-form-labels/master/dist/floatingFormLabels.min.js"></script>
+
+    <!-- Custom Script -->
+    <script src="assets/js/custom.js"></script>
+    <script>
+        $(document).ready(function() {
+            // BUTTON LOADING
+            $('.btn').on('click', function() {
+                var $this = $(this);
+                var loadingText = '<i class="fa fa-circle-o-notch fa-spin"></i> checking pin...';
+                if ($(this).html() !== loadingText) {
+                $this.data('original-text', $(this).html());
+                $this.html(loadingText);
+                
+                }
+                setTimeout(function() {
+                        if($('#pin').val() == ''){
+                        alert('Enter Valid Pin')
+                        } 
+                        else if($('#fname').val() == ''){
+                        alert('Enter Valid First Name')
+                        } 
+                        else if($('#lname').val() == ''){
+                        alert('Enter Valid Last Name')
+                        } 
+                        else if($('#phone').val() == ''){
+                        alert('Enter Valid Phone Number')
+                        } 
+                        else if($('#password').val() == ''){
+                        alert('Enter Valid Password')
+                        } 
+                        else{
+                        window.location.replace("student/registration.html");
+                        }               
+                $this.html($this.data('original-text'));
+                }, 2000);
+            });
+
+            // FLOATING PANEL ACTIVATION
+            $('.ffl-wrapper').floatingFormLabels();
+        })
+        
+        
+       
+    </script>
+  </body>
+</html>

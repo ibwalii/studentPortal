@@ -1,0 +1,29 @@
+$fontcolor : #000;
+body{
+    background: url("../img/bg.jpg");
+    padding-top: 20px;
+}
+
+.homewrapper{
+    margin-top: 20px;
+    margin: auto;
+    width: 80%;
+    background: rgba($color: #FFF, $alpha: 0.9);
+    color: $fontcolor;
+    min-height: 80vh;
+}
+// Home Header
+.header{
+    background: #FFF;
+}
+.header .brand {
+    height: 150px;;
+}
+
+// FOOTER
+.footer {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    background-color: #ffffff;
+}

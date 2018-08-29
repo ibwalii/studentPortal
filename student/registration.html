@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <link rel="shortcut icon" type="image/x-icon" href="../assets/img/logo.PNG" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Student Registration</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <!-- <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- Page level plugin CSS-->
+    <link href="vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="css/custom.css" rel="stylesheet">
+
+  </head>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+
+      <a class="navbar-brand mr-1" href="index.html">Mai-Idris Alooma Polytechnic Student Portal</a>
+
+      <button class="btn btn-link btn-sm text-white order-1 order-sm-0" id="sidebarToggle" href="#">
+        <i class="fas fa-bars"></i>
+      </button>
+
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <li class="nav-item dropdown no-arrow">
+         
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Student Name <i class="fas fa-user-circle fa-fw"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
+            <a class="dropdown-item" href="#">Settings</a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          </div>
+        </li>
+      </ul>
+
+    </nav>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="sidebar navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-fw fa-tachometer-alt"></i>
+              <span>My Profile</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+              <a class="nav-link" href="registration.html">
+                <i class="fas fa-fw fa-pen-alt"></i>
+                <span>My Registration</span>
+              </a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link" href="#">
+                <i class="fas fa-fw fa-balance-scale"></i>
+                <span>My Admissions</span>
+              </a>
+          </li>
+        </ul>
+
+      <div id="content-wrapper">
+
+        <div class="container-fluid">
+
+          <!-- Breadcrumbs-->
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="index.html">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Course Registration</li>
+          </ol>
+
+          <!-- Page Content -->
+          <h1>Course Registration</h1>
+          <hr>
+          <!-- multistep form -->
+        <form id="msform">
+        <!-- progressbar -->
+        <ul id="progressbar">
+          <li class="active">Bio Data</li>
+          <li>Qualifications</li>
+          <li>Schools</li>
+          <li>O'Levels</li>
+          <li>Choice</li>
+          <li>Print</li>
+        </ul>
+        <!-- fieldsets -->
+        <fieldset id="1">
+          <h3>Bio Data</h3>
+
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault01"></label>
+                  <input type="text" class="form-control" id="validationDefault01" placeholder="First name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault02"></label>
+                  <input type="text" class="form-control" id="validationDefault02" placeholder="Last name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault01"></label>
+                  <input type="text" class="form-control" id="validationDefault01" placeholder="Other name(s)" required>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationDefault03"></label>
+                  <input type="tel" class="form-control" id="validationDefault03" placeholder="Phone Number" required>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationDefault04"></label>
+                  <select class="custom-select" required>
+                      <option value="">Select Gender</option>
+                      <option value="1">Male</option>
+                      <option value="2">Female</option>
+                    </select>
+                </div>
+               
+              </div>
+              <div class="form-row">
+                  <div class="col-md-6 mb-3">
+                      <label for="validationDefault04"></label>
+                      <select class="custom-select" required>
+                          <option value="">State</option>
+                          <option value="1">Abia</option>
+                          <option value="2">Adamawa</option>
+                      </select>
+                    </div>
+                    <div class="col-md-6 mb-3">
+                        <label for="validationDefault04"></label>
+                        <select class="custom-select" required>
+                            <option value="">Local Government</option>
+                            <option value="1">Abia</option>
+                            <option value="2">Adamawa</option>
+                        </select>
+                      </div>
+                 
+                  
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationDefault03"></label>
+                        <input type="text" class="form-control" id="validationDefault03" placeholder="Nationality" required>
+                      </div>
+                </div>
+                <div class="form-row">
+                    <div class="col-md-12 mb-3">
+                        <label for="validationDefault03"></label>
+                        <input type="email" class="form-control" id="validationDefault03" placeholder="Email Address" required>
+                      </div>
+                </div>
+              <div class="form-row">
+                  <div class="col-md-10 mb-3">
+                    <label for="validationDefault03"></label>
+                    <textarea class="form-control" placeholder="Address" required></textarea>
+                  </div>
+                </div>
+              
+          <input type="button" name="next" class="next action-button" value="Next" />
+          
+        </fieldset>
+        <fieldset id="2" >
+          <h2 class="fs-title">Qualifications</h2>
+          <h3 class="fs-subtitle">Institute Attended </h3>
+          <div class="row">
+              <div class="col-md-12">
+                  <table class="table table-light">
+                      <thead>
+                        <tr>
+                          <th scope="col">Institute Name</th>
+                          <th scope="col">Program</th>
+                          <th scope="col">Year</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>Mai Poly</td>
+                          <td>Local Government</td>
+                          <td>2017</td>
+                        </tr>        
+                      </tbody>
+                    </table>
+              </div>
+          </div>
+          <!-- FORMS CONTINUATION -->
+          <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault01"></label>
+                <input type="text" class="form-control" id="validationDefault01" placeholder="Institute Attended" required>
+              </div>
+              <div class="col-md-4 mb-3">
+                <label for="validationDefault02"></label>
+                <input type="text" class="form-control" id="validationDefault02" placeholder="Program" required>
+              </div>
+              <div class="col-md-3 mb-3">
+                  <label for="validationDefault04"></label>
+                  <select class="custom-select" required>
+                      <option value="">Year of Graduation</option>
+                      <option value="1">2016</option>
+                      <option value="2">2017</option>
+                  </select>
+              </div>
+              <div class="col-md-1 mb-1">
+                  <label for="validationDefault04"></label>
+                  <button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          <input type="button" name="previous" class="previous action-button" value="Previous" />
+          <input type="button" name="next" class="next action-button" value="Next" />
+        </fieldset>
+        <fieldset id="3">
+            <h2 class="fs-title">Qualifications</h2>
+            <h3 class="fs-subtitle">Schools Attended </h3>
+            <div class="row">
+                <div class="col-md-12">
+                    <table class="table table-light">
+                        <thead>
+                          <tr>
+                            <th scope="col">School Name</th>
+                            <th scope="col">Qualification</th>
+                            <th scope="col">Year</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Mai Poly</td>
+                            <td>National Diploma</td>
+                            <td>2017</td>
+                            <td>remove</td>
+                          </tr>        
+                        </tbody>
+                      </table>
+                </div>
+            </div>
+            <!-- FORMS CONTINUATION -->
+            <div class="form-row">
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault01"></label>
+                  <input type="text" class="form-control" id="validationDefault01" placeholder="School Name" required>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="validationDefault02"></label>
+                  <select class="custom-select" required>
+                      <option value="">Select</option>
+                      <option value="1">First </option>
+                      <option value="2">Female</option>
+                    </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <label for="validationDefault04"></label>
+                    <select class="custom-select" required>
+                        <option value="">Year of Graduation</option>
+                        <option value="1">2016</option>
+                        <option value="2">2017</option>
+                    </select>
+                </div>
+                <div class="col-md-1 mb-1">
+                    <label for="validationDefault04"></label>
+                    <button class="btn btn-success"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </div>
+              </div>
+            <input type="button" name="previous" class="previous action-button" value="Previous" />
+            <input type="button" name="next" class="next action-button" value="Next" />
+          </fieldset>
+        <fieldset id="4">
+            <h2 class="fs-title">O'Level Result</h2>
+            <h3 class="fs-subtitle">Minimum of 1 sitting</h3>
+            <div class="row">
+              <div class="col">
+                Sitting 1
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">Select Exams</option>
+                      <option value="1">WAEC/WASSCE</option>
+                      <option value="2">Neco</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault02"></label>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Exam Number" required>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">Year</option>
+                      <option value="1">2016</option>
+                      <option value="2">2017</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Center Number" required>
+                  </div>
+                  <div class="col-md-8 mb-3">
+                    <label for="validationDefault02"></label>
+                    <input type="text" class="form-control" id="validationDefault02" placeholder="Center Name" required>
+                  </div>
+                </div>
+                <p>Result</p>
+                <hr>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                    1
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required disabled>
+                      <option value="1" selected>Mathematics</option>
+                      <option value="2">Neco</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                    2
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required disabled>
+                      <option value="1" selected>English</option>
+                      <option value="2">Neco</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   3
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   4
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   5
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   6
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   7
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   8
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="form-row">
+                  <div class="col-md-1 mb-3">
+                    <label for="validationDefault01"></label>
+                   9
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="1">Geography</option>
+                      <option value="2">Physics</option>
+                      <option value="2">Chemistry</option>
+                      <option value="2">Biology</option>
+                    </select>
+                  </div>
+                  <div class="col-md-4 mb-3">
+                    <label for="validationDefault01"></label>
+                    <select class="custom-select" required>
+                      <option value="">A1</option>
+                      <option value="1">B2</option>
+                      <option value="2">B3</option>
+                      <option value="2">C4</option>
+                      <option value="2">C5</option>
+                      <option value="2">C6</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                  Sitting 1
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">Select Exams</option>
+                        <option value="1">WAEC/WASSCE</option>
+                        <option value="2">Neco</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault02"></label>
+                      <input type="text" class="form-control" id="validationDefault02" placeholder="Exam Number" required>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">Year</option>
+                        <option value="1">2016</option>
+                        <option value="2">2017</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <input type="text" class="form-control" id="validationDefault02" placeholder="Center Number" required>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                      <label for="validationDefault02"></label>
+                      <input type="text" class="form-control" id="validationDefault02" placeholder="Center Name" required>
+                    </div>
+                  </div>
+                  <p>Result</p>
+                  <hr>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                      1
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required disabled>
+                        <option value="1" selected>Mathematics</option>
+                        <option value="2">Neco</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                      2
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required disabled>
+                        <option value="1" selected>English</option>
+                        <option value="2">Neco</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     3
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     4
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     5
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     6
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     7
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     8
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-1 mb-3">
+                      <label for="validationDefault01"></label>
+                     9
+                    </div>
+                    <div class="col-md-7 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="1">Geography</option>
+                        <option value="2">Physics</option>
+                        <option value="2">Chemistry</option>
+                        <option value="2">Biology</option>
+                      </select>
+                    </div>
+                    <div class="col-md-4 mb-3">
+                      <label for="validationDefault01"></label>
+                      <select class="custom-select" required>
+                        <option value="">A1</option>
+                        <option value="1">B2</option>
+                        <option value="2">B3</option>
+                        <option value="2">C4</option>
+                        <option value="2">C5</option>
+                        <option value="2">C6</option>
+                      </select>
+                    </div>
+                  </div>
+                </div>
+            </div>
+            
+            <input type="button" name="previous" class="previous action-button" value="Previous" />
+            <input type="submit" name="submit" class="next action-button" value="Next" />
+          </fieldset>
+            <fieldset id="5">
+              <h2 class="fs-title">Choice</h2>
+              <h3 class="fs-subtitle">Course of Interest</h3>
+               <!-- FORMS CONTINUATION -->
+               <div class="form-row">
+                  <div class="col-md-3 mb-3">
+                    <label for="validationDefault01">Program</label>
+                  </div>
+                  <div class="col-md-7 mb-3">
+                    <label for="validationDefault02"></label>
+                    <input type="text" class="form-control" id="validationDefault02" list="prog" placeholder="Program" required>
+                    <datalist id="prog">
+                        <option value="Pre-ND">
+                        <option value="National Diploma - ND">
+                        <option value="Higher National Diploma - HND">
+                        <option value="Post Graduate">
+                      </datalist>
+                  </div>
+                </div>
+
+          <div class="form-row">
+              <div class="col-md-3 mb-3">
+                <label for="validationDefault01">First Choice</label>
+              </div>
+              <div class="col-md-7 mb-3">
+                <label for="validationDefault02"></label>
+                <input type="text" class="form-control" id="validationDefault02" list="choice1" placeholder="Program" required>
+                <datalist id="choice1">
+                    <option value="Local Government Studies">
+                    <option value="Business Administration">
+                    <option value="Accounting">
+                    <option value="Economics">
+                    <option value="Computer Science">
+                  </datalist>
+              </div>
+            </div>
+            <div class="form-row">
+                <div class="col-md-3 mb-3">
+                  <label for="validationDefault01">Second Choice</label>
+                </div>
+                <div class="col-md-7 mb-3">
+                  <label for="validationDefault02"></label>
+                  <input type="text" class="form-control" id="validationDefault02" list="choice2" placeholder="Program" required>
+                  <datalist id="choice2">
+                      <option value="Local Government Studies">
+                      <option value="Business Administration">
+                      <option value="Accounting">
+                      <option value="Economics">
+                      <option value="Computer Science">
+                    </datalist>
+                </div>
+              </div>
+              <input type="button" name="previous" class="previous action-button" value="Previous" />
+              <input type="submit" name="submit" class="next action-button" value="Next" />
+            </fieldset>
+            <fieldset id="6">
+                <h2 class="fs-title">Application Review</h2>
+                <h3 class="fs-subtitle">Review and validate all information submitted</h3>
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col"></div>
+                  <div class="col">
+                    <img src="img/user.png" style="height:100px;" class="img-thumbnail rounded-circle" alt="">
+                  </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                      <p>&nbsp;</p>
+                      <table class="table table-bordered table-striped table-hover table-responsive">
+                        <thead class="thead">
+                          <tr>
+                            <th>Names : </th>
+                            <th colspan="4">Ibrahim Bakari</th>
+                          </tr>
+                          </thead>
+                          <tbody>
+                              <tr>
+                                  <td scope="row">Registration Number</td>
+                                  <td colspan="4">AE27700831</td>
+                                </tr>  
+                            <tr>
+                                  <td scope="row">Program Applied</td>
+                                  <td colspan="4">National Diploma</td>
+                                </tr>
+                            <tr>
+                              <td scope="row">Course Intended</td>
+                              <td colspan="4">Local Government Studies</td>
+                            </tr>
+                            <tr>
+                                <td scope="row">Second Choice</td>
+                                <td colspan="4">Business Administration</td>
+                              </tr>
+                            
+                            <tr>
+                                <td scope="row">O'Level</td>
+                                <td colspan="2">Number of Sitting: 2</td>
+                                <td>7 Credit + </td>
+                            </tr>
+                          </tbody>
+                      </table>
+                    </div>
+                  </div>
+
+                <input type="button" name="previous" class="previous action-button" value="Previous" />
+                <input type="submit" name="submit" class="submit action-button" value="Submit Application" />
+            </fieldset>
+        </form>
+        </div>
+        <p>&nbsp;</p>
+        <!-- /.container-fluid -->
+
+        <!-- Sticky Footer -->
+        
+        <!-- <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span>Copyright © Your Website 2018</span>
+            </div>
+          </div>
+        </footer> -->
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="../index.html">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin.min.js"></script>
+
+     <!-- Custom scripts for all pages-->
+     <script src="js/custom.js"></script>
+
+    <script>
+      $('#msform').submit(function(){
+        alert("submit");
+      })
+    </script>
+
+
+  </body>
+
+</html>
